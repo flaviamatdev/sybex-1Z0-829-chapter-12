@@ -12,5 +12,8 @@ public class Tourist {
 
         List<Tour> tours = TourFinder.findAllTours();
         System.out.println("# tours: " + tours.size());
+
+        List<Tour> tours2 = TourFinder.findAllToursUsingStream();
+        System.out.println("# tours: " + tours.size());
     }
 }

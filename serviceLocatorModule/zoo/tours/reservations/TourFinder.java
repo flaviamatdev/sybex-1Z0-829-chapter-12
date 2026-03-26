@@ -21,4 +21,11 @@ public class TourFinder {
         }
         return tours;
     }
+
+    public static List<Tour> findAllToursUsingStream() {
+        ServiceLoader<Tour> loader = ServiceLoader.load(Tour.class);
+        return loader.stream()
+            .map(ServiceLoader.Provider::get)
+            .toList();
+    }
 }
